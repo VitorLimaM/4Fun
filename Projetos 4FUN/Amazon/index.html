@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon Product Page Clone</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <img src="assets/logo.png" alt="Amazon Logo" class="logo">
+            <input type="text" class="search-bar" placeholder="Search...">
+            <button class="cart-button" aria-label="View Cart">Cart (0)</button>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <div class="product-container">
+            <!-- Product Images (Carrossel) -->
+            <section class="product-images">
+                <div class="carousel">
+                    <img src="assets/main-product.jpg" alt="Main Product" id="carousel-image">
+                    <button id="prev" class="carousel-btn" aria-label="Previous Image">❮</button>
+                    <button id="next" class="carousel-btn" aria-label="Next Image">❯</button>
+                </div>
+                <div class="thumbnails">
+                    <img src="assets/thumb1.jpg" alt="Thumbnail 1" class="thumbnail" aria-label="Thumbnail 1">
+                    <img src="assets/thumb2.jpg" alt="Thumbnail 2" class="thumbnail" aria-label="Thumbnail 2">
+                    <img src="assets/thumb3.jpg" alt="Thumbnail 3" class="thumbnail" aria-label="Thumbnail 3">
+                </div>
+            </section>
+
+            <!-- Product Details -->
+            <section class="product-details">
+                <h1>Product Title</h1>
+                <p class="price">$99.99</p>
+                <p class="description">This is a brief description of the product.</p>
+                <button class="buy-now" aria-label="Buy Now">Buy Now</button>
+                <button class="add-to-cart" aria-label="Add to Cart">Add to Cart</button>
+                <div class="tooltip">
+                    <button class="info-btn">Info</button>
+                    <span class="tooltiptext">This is a fantastic product with amazing features.</span>
+                </div>
+            </section>
+        </div>
+
+        <!-- Reviews Section -->
+        <section class="reviews">
+            <h2>Customer Reviews</h2>
+            <div class="review">
+                <p>"Amazing product!"</p>
+                <span>⭐⭐⭐⭐⭐</span>
+            </div>
+            <div class="review">
+                <p>"Worth every penny."</p>
+                <span>⭐⭐⭐⭐</span>
+            </div>
+            <!-- Avaliação com Estrelas -->
+            <div class="review-rating">
+                <span class="star" data-rating="1" aria-label="1 star">★</span>
+                <span class="star" data-rating="2" aria-label="2 stars">★</span>
+                <span class="star" data-rating="3" aria-label="3 stars">★</span>
+                <span class="star" data-rating="4" aria-label="4 stars">★</span>
+                <span class="star" data-rating="5" aria-label="5 stars">★</span>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Amazon Clone. All rights reserved.</p>
+    </footer>
+
+    <!-- Menu Hamburger (Responsivo) -->
+    <div class="hamburger-menu">
+        <span class="bar"></span>
+        <span class="bar"></span>
+        <span class="bar"></span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

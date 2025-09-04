@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f4f4f9;
+    transition: background-color 0.3s ease;
+}
+
+.container {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+input, button, select {
+    padding: 10px;
+    margin: 10px 0;
+    width: 80%;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+.filters button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.filters button:hover {
+    background-color: #0056b3;
+}
+
+#clearAllButton {
+    background-color: #FF3B3B;
+}
+
+#clearAllButton:hover {
+    background-color: #e02e2e;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    background-color: #f1f1f1;
+    padding: 10px;
+    margin: 5px 0;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    transform: translateY(-20px);
+    animation: fadeIn 0.3s forwards;
+    transition: transform 0.3s ease;
+}
+
+li.completed {
+    text-decoration: line-through;
+    color: #888;
+    transform: scale(1.05);
+}
+
+li.low {
+    background-color: #f1f1f1;
+}
+
+li.medium {
+    background-color: #ffd966;
+}
+
+li.high {
+    background-color: #ff6666;
+}
+
+button:disabled {
+    background-color: #ddd;
+    cursor: not-allowed;
+}
+
+/* Tema escuro */
+.dark-theme {
+    background-color: #333;
+    color: white;
+}
+
+.dark-theme input, .dark-theme button {
+    background-color: #444;
+    color: white;
+}
+
+@keyframes fadeIn {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 15px;
+    }
+
+    input, button, select {
+        width: 100%;
+    }
+}

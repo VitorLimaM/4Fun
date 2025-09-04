@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Temperaturas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Conversor de Temperaturas</h1>
+        <label for="celsius">Temperatura em Celsius:</label>
+        <input type="text" id="celsius" placeholder="Ex: 25">
+        <div id="error-celsius" class="error-message">Por favor, insira um número válido.</div>
+
+        <label for="fahrenheit">Temperatura em Fahrenheit:</label>
+        <input type="text" id="fahrenheit" placeholder="Ex: 77">
+        <div id="error-fahrenheit" class="error-message">Por favor, insira um número válido.</div>
+
+        <label for="kelvin">Temperatura em Kelvin:</label>
+        <input type="text" id="kelvin" placeholder="Ex: 298.15">
+        <div id="error-kelvin" class="error-message">Por favor, insira um número válido.</div>
+
+        <label for="rankine">Temperatura em Rankine:</label>
+        <input type="text" id="rankine" placeholder="Ex: 527.87">
+        <div id="error-rankine" class="error-message">Por favor, insira um número válido.</div>
+
+        <button id="convert-button">Converter</button>
+        <button id="reset-button">Limpar</button>
+
+        <div id="loading" style="display: none;">
+            <img src="loading-icon.gif" alt="Carregando..." />
+        </div>
+
+        <div id="results">
+            <p id="result-celsius">Celsius: </p>
+            <p id="result-fahrenheit">Fahrenheit: </p>
+            <p id="result-kelvin">Kelvin: </p>
+            <p id="result-rankine">Rankine: </p>
+        </div>
+    </div>
+
+    <script src="t.js"></script>
+</body>
+</html>

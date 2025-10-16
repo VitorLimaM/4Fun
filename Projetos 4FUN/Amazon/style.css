@@ -1,11 +1,11 @@
-/* Reset Básico */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Fontes e Corpo */
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f3f3f3;
@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
 }
 
-/* Links e Botões */
+
 a {
     text-decoration: none;
     color: inherit;
@@ -34,7 +34,7 @@ button:hover {
     background-color: #ddb347;
 }
 
-/* Header */
+
 header {
     background-color: #232f3e;
     padding: 10px 20px;
@@ -65,7 +65,7 @@ header {
     font-weight: bold;
 }
 
-/* Menu Hamburger */
+
 .hamburger-menu {
     display: none;
     cursor: pointer;
@@ -80,7 +80,7 @@ header {
     border-radius: 2px;
 }
 
-/* Product Container */
+
 .product-container {
     display: flex;
     justify-content: space-between;
@@ -166,7 +166,7 @@ header {
     color: #555;
 }
 
-/* Tooltip */
+
 .tooltip {
     position: relative;
     display: inline-block;
@@ -192,7 +192,7 @@ header {
     visibility: visible;
 }
 
-/* Reviews */
+
 .reviews {
     margin: 20px;
     padding: 20px;
@@ -226,7 +226,7 @@ header {
     color: gold;
 }
 
-/* Responsividade Aprimorada */
+
 @media (max-width: 1024px) {
     .product-container {
         flex-direction: column;
@@ -281,3 +281,4 @@ header {
         display: flex;
     }
 }
+

@@ -1,4 +1,4 @@
-// Seleção de elementos
+
 const taskInput = document.getElementById('taskInput');
 const addTaskButton = document.getElementById('addTaskButton');
 const taskList = document.getElementById('taskList');
@@ -11,7 +11,7 @@ const dueDateInput = document.getElementById('dueDateInput');
 const fileInput = document.getElementById('fileInput');
 const themeToggle = document.getElementById('themeToggle');
 
-// Função para adicionar tarefa
+
 function addTask() {
     const taskText = taskInput.value.trim();
     const priority = prioritySelect.value;
@@ -30,12 +30,12 @@ function addTask() {
 
         taskItem.classList.add(priority);
 
-        // Marcar tarefa como concluída
+        
         taskItem.addEventListener('click', () => {
             taskItem.classList.toggle('completed');
         });
 
-        // Remover tarefa
+        
         const removeButton = document.createElement('button');
         removeButton.textContent = 'X';
         removeButton.addEventListener('click', () => {
@@ -49,7 +49,7 @@ function addTask() {
         dueDateInput.value = '';
         fileInput.value = '';
 
-        // Notificação
+        
         if (Notification.permission === "granted") {
             new Notification("Tarefa adicionada", {
                 body: taskText
@@ -58,22 +58,22 @@ function addTask() {
     }
 }
 
-// Adicionar tarefa ao clicar no botão
+
 addTaskButton.addEventListener('click', addTask);
 
-// Adicionar tarefa ao pressionar Enter
+
 taskInput.addEventListener('keypress', (event) => {
     if (event.key === 'Enter') {
         addTask();
     }
 });
 
-// Limpar todas as tarefas
+
 clearAllButton.addEventListener('click', () => {
     taskList.innerHTML = '';
 });
 
-// Filtros
+
 function filterTasks(filter) {
     const tasks = document.querySelectorAll('li');
     tasks.forEach(task => {
@@ -94,18 +94,18 @@ allFilter.addEventListener('click', () => filterTasks('all'));
 activeFilter.addEventListener('click', () => filterTasks('active'));
 completedFilter.addEventListener('click', () => filterTasks('completed'));
 
-// Alternar tema
+
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('dark-theme');
     localStorage.setItem('theme', document.body.classList.contains('dark-theme') ? 'dark' : 'light');
 });
 
-// Verificar tema salvo
+
 if (localStorage.getItem('theme') === 'dark') {
     document.body.classList.add('dark-theme');
 }
 
-// Armazenamento e Sincronização Local
+
 function saveTasks() {
     const tasks = [];
     const taskItems = document.querySelectorAll('li');
@@ -143,3 +143,4 @@ function loadTasks() {
 
 loadTasks();
 setInterval(saveTasks, 1000);
+

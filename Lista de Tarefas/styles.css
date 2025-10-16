@@ -98,7 +98,7 @@ button:disabled {
     cursor: not-allowed;
 }
 
-/* Tema escuro */
+
 .dark-theme {
     background-color: #333;
     color: white;
@@ -126,3 +126,4 @@ button:disabled {
         width: 100%;
     }
 }
+
